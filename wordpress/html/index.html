@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projet pro 1 - DevOps - Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h2>À propos du projet</h2>
+    <p>
+        Préambule
+        L’objectif de cette documentation est de montrer comment accèder à l’interface web InfluxDB pour y
+        voir les graphes de consommation électrique provenant du plugin Telegraf pour PowerTop.
+    </p>
+
+    <h2> VLOG </h2>
+
+    <iframe width="892" height="502" src="https://www.youtube.com/embed/hn1SfR048q8" title="Projet Pro 1  2023 - DevOps - VLOG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2>Documentation</h2>
+    <p> Après avoir git clone le répertoire git : https://gitlab.com/IROUAG/projet_pro-1_ilies_sylvain
+        Entrez dans le dossier projet_pro-1_ilies_sylvain/ </p>
+    <img src="Screenshot from 2023-05-16 11-42-15.png" />
+
+    <p> Utilisez la commande docker-compose up -d --build pour construire l’infrastructure conteneurisée du projet.
+        Cela prend un certain temps (≈ 5 mins).</p>
+        <img src="Screenshot from 2023-05-16 11-43-17.png" />
+
+    <p> Une fois le docker-compose terminé, nous pouvons accèder à WordPress via l’adresse : http://localhost:80/ </p>
+        <img src="Screenshot from 2023-05-16 12-00-02.png" />
+    <p> N.B. La capture d’écran ci-dessus a été prise avant le déploiement de la configuration WordPress (avec le blog).</p>
+
+    <p>Nous pouvons également accèder à l’interface web d’InfluxDB via l’adresse : http://localhost:8086/</p>
+    <img src="Screenshot from 2023-05-16 12-01-16.png" />
+
+    <p>Les credentials pour accèder aux différents services se trouvent dans le fichier .env situé en racine du dépôt git.</p>
+    <img src="wordpress\html\Screenshot from 2023-05-16 14-16-23.png" />
+
+    <p>On peut donc se connecter avec les identifiants admin pour InfluxDB : admin / admin_password</p>
+    <img src="Screenshot from 2023-05-16 12-07-49.png" />
+
+    <p>En cliquant sur Explore vous pouvez accèder aux différents graphes disponibles sur la plateforme.</p>
+    <img src="Screenshot from 2023-05-16 12-22-09.png" />
+
+    <p>En cliquant sur Explore vous pouvez accèder aux différents graphes disponibles sur la plateforme.</p>
+    <img src="Screenshot from 2023-05-16 12-22-09.png" />
+
+    <p> En bas à droite de la page, cliquez sur Submit une fois les paramètres voulus sélectionnés.
+        Vous pouvez par ailleurs télécharger les résultats de vos requêtes sous format CSV.</p>
+        <img src="Screenshot from 2023-05-16 13-40-24.png" />
+    
+    
+    <p>Nous pouvons ainsi changer les paramètres, choisir ce que nous souhaitons mesurer et mettre en forme cela sous
+        forme de graphes et autres visuels.
+        En conclusion, le plugin Telegraf pour PowerTop nous permet de voir ces mesures qui sont stockées sur une base de
+        données InfluxDB et consultables sur l’interface web de cette dernière.</p>
+</body>
+</html>
